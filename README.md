@@ -13,3 +13,5 @@ A playground repo that demonstrates the usage of GitHub Agentic workflows
 - [GitHub Blog: Automate repository tasks with GitHub Agentic Workflows](https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/)
 - [GitHub Next project page & repo](https://githubnext.com/projects/agentic-workflows/) and [gh-aw repo](https://github.com/githubnext/gh-aw) ([docs](https://githubnext.github.io/gh-aw))
 - [Josh Johanning: Getting Started with GitHub Agentic Workflows: A Hands-On Guide](https://josh-ops.com/posts/github-agentic-workflows/)
+
+_(small doc tweak — innocent second candidate for the incident demo)_
