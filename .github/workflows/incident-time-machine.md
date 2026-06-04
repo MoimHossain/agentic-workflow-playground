@@ -155,17 +155,31 @@ git revert -m 1 <commit-sha>
 ## Step 4 — Open a draft revert PR
 
 Use the `create-pull-request` safe output to open a **draft** PR that reverts
-the suspected culprit commit. The PR body must:
+the suspected culprit commit.
 
-- link back to the RCA issue you just created
+**Important** — the safe-output framework only opens a PR when there are
+**actual file changes** in your workspace. So you must:
+
+1. Use the `bash` tool to run `git checkout main && git pull` (the workspace
+   already has the repo checked out).
+2. Run `git revert --no-commit -m 1 <culprit-sha>` (or, if it was a squash
+   merge, `git revert --no-commit <culprit-sha>`). If the revert conflicts,
+   abort it and instead manually edit the affected files to undo the change,
+   then `git add` them.
+3. Do NOT commit or push — the safe-output framework handles that.
+4. Emit the `create-pull-request` safe output with the body described below.
+
+The PR body must:
+
+- link back to the RCA issue you just created (use `#<issue-number>`)
 - quote the alert
 - state confidence level
 - include the exact `git revert` command used
 - explicitly say "DRAFT — do not merge without on-call approval"
 
 If you could not identify a culprit with at least medium confidence, **skip
-the revert PR** and instead add a section "No automated revert proposed" to
-the RCA issue explaining why.
+the revert PR entirely** (do not emit `create-pull-request`) and instead add
+a section "No automated revert proposed" to the RCA issue explaining why.
 
 ## Guardrails
 
