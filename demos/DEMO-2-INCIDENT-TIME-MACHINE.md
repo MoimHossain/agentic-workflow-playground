@@ -76,6 +76,20 @@ git commit -m "Add incident-time-machine demo scaffold"
 git push
 ```
 
+**⚠️ One-time repo setting** (otherwise the agent can push the revert branch
+but cannot open the PR — it will create an issue instead with a "click here
+to create the PR" link):
+
+```powershell
+gh api -X PUT repos/:owner/:repo/actions/permissions/workflow `
+  -f default_workflow_permissions=write `
+  -F can_approve_pull_request_reviews=true
+```
+
+Or in the UI: **Settings → Actions → General → Workflow permissions →**
+✅ *Read and write* + ✅ *Allow GitHub Actions to create and approve pull
+requests*.
+
 Create the demo labels:
 
 ```powershell
