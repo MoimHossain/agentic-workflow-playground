@@ -1,6 +1,6 @@
 # 🛡️ Demo 1 — Compliance Co-Pilot
 
-> **Audience:** ING / regulated-industry stakeholders
+> **Audience:** Regulated-industry stakeholders
 > **Duration:** ~5 minutes live
 > **What it shows:** an agentic workflow that turns written banking policies
 > into automated PR review, enforcing GDPR / PSD2 / internal controls on every
