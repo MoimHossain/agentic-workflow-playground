@@ -1,6 +1,6 @@
 # 🕰️ Demo 2 — Incident Time-Machine
 
-> **Audience:** ING / SRE / platform-engineering stakeholders
+> **Audience:** SRE / platform-engineering stakeholders
 > **Duration:** ~4 minutes live
 > **What it shows:** an agentic workflow that turns an alert into a draft RCA
 > issue + a draft revert PR in under two minutes — chaining observability,
