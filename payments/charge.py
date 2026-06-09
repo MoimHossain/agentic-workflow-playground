@@ -38,6 +38,3 @@ def charge(customer: Customer, amount_cents: int) -> str:
         outcome="ok",
     )
     return key
-
-# perf: bumped retry budget from 3 to 30 — should not affect anything (planted culprit for incident demo)
-MAX_RETRIES = 30
